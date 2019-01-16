@@ -1,0 +1,117 @@
+
+/*MKB*/
+:root{
+	font-size: 16px;
+	/*white*/
+	--color1: #ffffff;
+	/*light gray*/
+	--color2: #d6d6d6;
+	/*dark gray*/
+	--color3: #505050;
+	/*orange*/
+	--color4: #ff9800;
+	/*purple*/
+	--color5: #876692;
+	
+}
+@media all and (max-width: 400px) {
+	:root{
+		font-size: 12px;
+	}
+
+}
+
+*{
+	letter-spacing: 1;
+	line-height: 2;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+	font-family: Roboto Mono;
+	color: white;
+	}
+html{
+	background: url("images/light-wool.png"), linear-gradient(to bottom left, var(--color2), var(--color3));
+}
+
+
+/* BANNER OPEN */
+#banner{
+	
+	height: 100vh;
+	display: grid;
+	grid-gap: 2rem;
+	justify-items: center;
+	align-items: center;
+
+}
+#banner h1, #banner h2{
+	z-index: 1;
+	text-align: right;
+	padding: 2rem 1rem 1rem 1rem;
+}
+@media all and (max-width: 1100px){
+		#banner div{
+		width: 100%;
+	}
+}
+@media all and (min-width: 1100px) {
+
+	#banner div h1 br{
+		display: none;
+	}
+}
+#banner h1{
+	font-size: 5rem;
+	line-height: 1.3;
+
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 6'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift /*SPEED*/.5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,4 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	
+	background-position: 0 100%;
+	background-size: auto 15px;
+	background-repeat: repeat-x;
+}
+
+#banner h1::before{
+
+	z-index: -1;
+	
+	content: '';
+	background-image: url("images/mikey_purp.png") ;
+	background-position: 0 95%;
+	background-repeat: no-repeat;
+	background-size: 50vh;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	bottom: 0vh;
+	width: 100vw;
+	transform: translateY(100%);
+	transition: transform .3s;
+}
+
+#banner h1:hover::before {
+	transform: translateY(0px);
+}
+
+#banner h2{
+	font-size:  3rem;
+	display: none;
+}
+#banner h2:nth-child(2){
+	color: #33658a;
+}
+#banner h2:nth-child(3){
+	color: #86bbd8;
+}
+#banner h2:nth-child(4){
+	color: #2f4858;
+}
+.testing{
+	height: 100vh;
+	width: 100%;
+	background: url("images/light-wool.png"), var(--color4);
+}
+
+
